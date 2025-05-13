@@ -139,22 +139,25 @@ function showLocalStorage() {
             winnerTwo[currentGame].appendChild(crownImg);
         }
 
-        currentGame += 1;
-        gameWinner = null;
+        currentGame++;
+
+        if (currentGame === resultsBlocks.length) {
+            setTimeout(() => {
+                resultsBlocks.forEach((row, index) => {
+                    row.classList.add("invisible");
+                    winnerOne[index].innerHTML = "";
+                    winnerTwo[index].innerHTML = "";
+                });
+
+                currentGame = 0;
+
+            }, 1000);
+        }
     }
 
-    if (currentGame >= resultsBlocks.length) {
-        setTimeout(() => {
-            resultsBlocks.forEach((row, index) => {
-                row.classList.add("invisible");
-                winnerOne[index].innerHTML = "";
-                winnerTwo[index].innerHTML = "";
-            });
-
-            currentGame = 0;
-        }, 1000);
-    }
+    gameWinner = null;
 }
+
 
 
  
