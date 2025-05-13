@@ -7,7 +7,7 @@ const lineIndex = document.querySelectorAll(".line");
 const restartBtn = document.getElementById("restartGame");
 const crown = document.querySelector(".crown");
 const result = document.getElementById("result");
-const resultsBlocks = document.querySelectorAll(".invisible");
+const resultsBlocks = document.querySelectorAll(".results-row");
 const winnerOne = document.querySelectorAll(".winner-one");
 const winnerTwo = document.querySelectorAll(".winner-two");
 
@@ -140,16 +140,22 @@ function showLocalStorage() {
         }
 
         currentGame += 1;
-    } else {
-        resultsBlocks.forEach((row, index) => {
-            row.classList.add("invisible");
-            winnerOne[index].innerHTML = "";
-            winnerTwo[index].innerHTML = "";
-        });
+        gameWinner = null;
+    }
 
-        currentGame = 0;
+    if (currentGame >= resultsBlocks.length) {
+        setTimeout(() => {
+            resultsBlocks.forEach((row, index) => {
+                row.classList.add("invisible");
+                winnerOne[index].innerHTML = "";
+                winnerTwo[index].innerHTML = "";
+            });
+
+            currentGame = 0;
+        }, 1000);
     }
 }
+
 
  
 function restartGame() {
