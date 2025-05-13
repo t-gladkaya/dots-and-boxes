@@ -141,7 +141,7 @@ function showLocalStorage() {
 
         currentGame++;
 
-        if (currentGame === resultsBlocks.length) {
+        if (currentGame === resultsBlocks.length-1) {
             setTimeout(() => {
                 resultsBlocks.forEach((row, index) => {
                     row.classList.add("invisible");
