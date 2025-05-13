@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.jpg">
+    <title>Dots and Boxes</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="game-area">
+            <div class="players-and-gameTable">
+                <div class="players">
+                    <div class="firstPlayer" id="playerOneActive">Player 1</div>
+                    <div class="secondPlayer" id="playerTwoActive">Player 2</div>
+                </div>
+
+                <div id="game-table">
+                    <!-- Row 1 -->
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="1"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="2"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="3"></div>
+                    <div class="dot"></div>
+                    
+                    <!-- Row 2 -->
+                    <div class="line v-line" data-line-index="4"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="5"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="6"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="7"></div>
+                
+                    <!-- Row 3 -->
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="8"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="9"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="10"></div>
+                    <div class="dot"></div>
+                
+                    <!-- Row 4 -->
+                    <div class="line v-line" data-line-index="11"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="12"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="13"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="14"></div>
+                
+                    <!-- Row 5 -->
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="15"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="16"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="17"></div>
+                    <div class="dot"></div>
+
+                    <!-- Row 6 -->
+                    <div class="line v-line" data-line-index="18"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="19"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="20"></div>
+                    <div class="box"></div>
+                    <div class="line v-line" data-line-index="21"></div>
+
+                    <!-- Row 7 -->
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="22"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="23"></div>
+                    <div class="dot"></div>
+                    <div class="line h-line" data-line-index="24"></div>
+                    <div class="dot"></div>
+
+                </div>
+
+                <div class="gameOver">
+                    <div id="result"></div>
+                    <button type="submit" id="restartGame">Restart</button>
+                </div>
+            </div>
+
+            <div id="local-storage">
+                <table id="local-storage-table">
+                    <caption>Winners board</caption>
+                    <tr class="invisible">
+                        <th id="game-1">1</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-2">2</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-3">3</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-4">4</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-5">5</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-6">6</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-7">7</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-8">8</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-9">9</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                    <tr class="invisible">
+                        <th id="game-10">10</th>
+                        <td class="winner-one"></td>
+                        <td class="winner-two"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
